@@ -1,14 +1,10 @@
 package com.Bridgelabz;
 
 public class Employee {
-
     public static final int IsPartTime = 1;
     public static final int IsFullTime = 2;
-    public static final int WagePerHr = 20;
-    public static final int WorkingDays = 5;
-    public static final int MaxHrsInMonth = 50;
 
-    public static void CalculateWage(){
+    public static void CalculateWage(String a,int WagePerHr,int WorkingDays,int MaxHrsInMonth){
         int EmpHr = 0;
         int TotalEmpHr = 0;
         int TotalEmpWage = 0;
@@ -33,10 +29,12 @@ public class Employee {
             System.out.println("\n Day#: "+TotalWorkingDay+" Employee Woks :"+EmpHr+"Hrs");
         }
         TotalEmpWage = TotalEmpHr*WagePerHr;
-        System.out.println("\n * The Total Wage Of Employee Is :" + TotalEmpWage);
+        System.out.println("\n --> For Company "+ a + " The Total Wage Of Employee Is :" + TotalEmpWage);
     }
     public static void main(String[] args){
-        CalculateWage();
+        CalculateWage("Apple",30,5,10);
+        CalculateWage("Google",50,3,10);
+        CalculateWage("Microsoft",25,5,10);
+        CalculateWage("Orale",15,10,50);
     }
 }
-
