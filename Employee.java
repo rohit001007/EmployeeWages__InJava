@@ -1,7 +1,7 @@
 package com.Bridgelabz;
 
 import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.Map;
 
 public class Employee implements IComputeEmpWage {
@@ -9,11 +9,11 @@ public class Employee implements IComputeEmpWage {
     public static final int IS_FULL_TIME = 1;
     public static final int IS_PART_TIME = 2;
 
-    private LinkedList<ComapnyEmpWage> comapnyEmpWageList;
+    private ArrayList<ComapnyEmpWage> comapnyEmpWageList;
     private Map<String, ComapnyEmpWage> companyToEmpWageMap;
 
     private Employee() {
-        comapnyEmpWageList = new LinkedList<>();
+        comapnyEmpWageList = new ArrayList<>();
         companyToEmpWageMap = new HashMap<>();
     }
 
