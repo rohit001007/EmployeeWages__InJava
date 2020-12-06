@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
-class EmpWageBuilder implements IComputeEmpWage {
+public class Employee implements IComputeEmpWage {
 
     public static final int IS_FULL_TIME = 1;
     public static final int IS_PART_TIME = 2;
@@ -12,7 +12,7 @@ class EmpWageBuilder implements IComputeEmpWage {
     private LinkedList<ComapnyEmpWage> comapnyEmpWageList;
     private Map<String, ComapnyEmpWage> companyToEmpWageMap;
 
-    private EmpWageBuilder() {
+    private Employee() {
         comapnyEmpWageList = new LinkedList<>();
         companyToEmpWageMap = new HashMap<>();
     }
@@ -59,7 +59,7 @@ class EmpWageBuilder implements IComputeEmpWage {
     }
 
     public static void main(String[] args) {
-        IComputeEmpWage empWage = new EmpWageBuilder();
+        IComputeEmpWage empWage = new Employee();
         empWage.addComapnyEmpWage("Apple", 20, 20, 100);
         empWage.addComapnyEmpWage("Google", 30, 20, 80);
         empWage.addComapnyEmpWage("Microsoft", 30, 20, 80);
